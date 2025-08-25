@@ -1,0 +1,14 @@
+
+### Career Advice (sample)
+POST http://127.0.0.1:8000/career-advice
+Content-Type: application/json
+
+{
+  "name": "Alex",
+  "background": "2nd year CS student, basic Python & web dev",
+  "skills": ["Python", "HTML", "CSS"],
+  "interests": ["Data Science", "Machine Learning"],
+  "goals": ["Get an internship", "Build portfolio"],
+  "experience_level": "beginner",
+  "time_per_week_hours": 8
+}

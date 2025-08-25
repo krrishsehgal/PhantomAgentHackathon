@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CareerAI Advisor</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="home-view" class="view">
+        <header class="main-header">
+            <div class="logo">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15v-2h2v2zm2-4h-2V7h2z"></path></svg>
+                <span>CareerAI</span>
+            </div>
+            <button class="cta-button" data-action="start">Get Started &rarr;</button>
+        </header>
+        <main class="container">
+            <section class="hero">
+                <h1>AI-Powered<br><span class="highlight">Career Guidance</span></h1>
+                <p>Get personalized career recommendations, skill development plans, and learning resources tailored to your goals and experience level.</p>
+                <button class="cta-button large" data-action="start">
+                    <svg viewBox="0 0 24 24"><path d="M12 2L9.5 8.5 3 9l5 4.5L6.5 20 12 17l5.5 3L17 13.5l5-4.5-6.5-.5z"></path></svg>
+                    Start Your Career Plan
+                </button>
+                <span class="sub-text">Free • Takes 2 minutes • Instant results</span>
+            </section>
+            <section class="features">
+                <div class="feature-card">
+                    <div class="icon-bg"><svg viewBox="0 0 24 24"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"></path></svg></div>
+                    <h3>Personalized Career Paths</h3>
+                    <p>AI analyzes your skills and goals to suggest the best career opportunities with growth potential and salary insights.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon-bg"><svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 14h-8v-2h8v2zm0-4h-8v-2h8v2zm-3-5V3.5L18.5 9H13z"></path></svg></div>
+                    <h3>Skill Development Plans</h3>
+                    <p>Get specific recommendations for skills to learn next, with curated resources and a structured 30/60/90 day plan.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon-bg"><svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"></path></svg></div>
+                    <h3>AI Career Chat</h3>
+                    <p>Ask follow-up questions and get personalized advice from your AI career advisor anytime.</p>
+                </div>
+            </section>
+            <section class="cta-block">
+                <div class="icon-bg-large"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15v-2h2v2zm2-4h-2V7h2z"></path></svg></div>
+                <h2>Ready to Accelerate Your Career?</h2>
+                <p>Join thousands of professionals who have transformed their careers with AI-powered guidance.</p>
+                <button class="cta-button large" data-action="start">
+                   <svg viewBox="0 0 24 24"><path d="M12 2L9.5 8.5 3 9l5 4.5L6.5 20 12 17l5.5 3L17 13.5l5-4.5-6.5-.5z"></path></svg>
+                   Create My Career Plan
+                </button>
+            </section>
+        </main>
+        <footer>Powered by advanced AI • Built for career growth • Free to use</footer>
+    </div>
+
+    <div id="form-view" class="view hidden">
+        <header class="form-header">
+            <div class="logo">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15v-2h2v2zm2-4h-2V7h2z"></path></svg>
+                <span>CareerAI</span>
+            </div>
+        </header>
+        <main class="container">
+            <a href="#" class="back-link" data-action="home">&larr; Back to Home</a>
+            <form id="profileForm">
+                <h2>
+                    <svg viewBox="0 0 24 24"><path d="M12 2L9.5 8.5 3 9l5 4.5L6.5 20 12 17l5.5 3L17 13.5l5-4.5-6.5-.5z"></path></svg>
+                    Career Profile Assessment
+                </h2>
+                <p class="sub-heading">Tell us about yourself and we'll create a personalized career development plan powered by AI.</p>
+                
+                <div class="grid-3">
+                    <label>Name<input type="text" id="name" placeholder="e.g., Alex"></label>
+                    <label>Experience Level
+                        <select id="experience_level">
+                            <option value="" disabled selected>Select...</option>
+                            <option value="beginner">Beginner</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="advanced">Advanced</option>
+                        </select>
+                    </label>
+                    <label>Time per week (hours)<input type="number" id="time_per_week_hours" min="1" max="60" placeholder="10"></label>
+                </div>
+
+                <label>Background (short description)
+                    <textarea id="background" placeholder="e.g., CS undergrad, did 2 internships in web dev"></textarea>
+                </label>
+                
+                <div class="grid-2">
+                    <label>Current skills (comma separated)<input type="text" id="skills" placeholder="Python, HTML, CSS, React"></label>
+                    <label>Interests (comma separated)<input type="text" id="interests" placeholder="ML, data viz, backend development"></label>
+                </div>
+
+                <label>Goals (comma separated)
+                    <input type="text" id="goals" placeholder="Get an ML internship, publish a project, learn new frameworks">
+                </label>
+
+                <div class="form-actions">
+                    <button type="button" id="trySampleBtn">Try Sample</button>
+                    <button type="button" id="clearBtn">Clear</button>
+                    <button type="submit" id="submitBtn">
+                        <svg viewBox="0 0 24 24"><path d="M12 2L9.5 8.5 3 9l5 4.5L6.5 20 12 17l5.5 3L17 13.5l5-4.5-6.5-.5z"></path></svg>
+                        Generate My Career Plan
+                    </button>
+                </div>
+            </form>
+        </main>
+    </div>
+
+    <div id="loading-view" class="view hidden">
+        <div class="loading-modal">
+            <div class="icon-bg-large"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15v-2h2v2zm2-4h-2V7h2z"></path></svg></div>
+            <h2>AI is Analyzing Your Profile</h2>
+            <p>Creating your personalized career development plan...</p>
+            <div class="loading-steps">
+                <span><div class="spinner"></div>Analyzing your skills and experience</span>
+                <span><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"></path></svg>Matching career opportunities</span>
+                <span><svg viewBox="0 0 24 24"><path d="M12 2L9.5 8.5 3 9l5 4.5L6.5 20 12 17l5.5 3L17 13.5l5-4.5-6.5-.5z"></path></svg>Generating learning roadmap</span>
+            </div>
+            <div class="progress-bar"><div class="progress"></div></div>
+            <p class="timer-text">This usually takes 10-15 seconds ⏳</p>
+        </div>
+    </div>
+
+    <div id="results-view" class="view hidden">
+        <header class="form-header">
+             <div class="logo">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15v-2h2v2zm2-4h-2V7h2z"></path></svg>
+                <span>CareerAI</span>
+            </div>
+        </header>
+        <main class="container">
+            <a href="#" class="back-link" data-action="form">&larr; Start Over</a>
+            <div class="results-header">
+                <h1>Your Personalized Career Plan</h1>
+                <p>AI-powered recommendations tailored for <span id="userName">you</span>.</p>
+            </div>
+
+            <section id="results-content">
+                <h2 class="section-title"><svg viewBox="0 0 24 24"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"></path></svg>Suggested Career Paths</h2>
+                <div class="card-grid-3" id="career_paths"></div>
+                
+                <h2 class="section-title"><svg viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"></path></svg>Next Skills to Learn</h2>
+                <div class="card-grid-2" id="next_skills"></div>
+
+                <h2 class="section-title"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"></path></svg>Learning Resources</h2>
+                <div class="card-grid-2" id="resources"></div>
+
+                <h2 class="section-title"><svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM7 12h5v5H7v-5z"></path></svg>30 / 60 / 90 Day Plan</h2>
+                <div class="card-grid-3" id="plan"></div>
+            </section>
+
+            <section id="chatbot">
+                <h2 class="section-title"><svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"></path></svg>AI Career Advisor Chat</h2>
+                <p class="sub-heading">Ask me anything about your career plan, skills development, or job search strategies.</p>
+                <div id="chatHistory"></div>
+                <form id="chatForm">
+                    <input type="text" id="chatInput" placeholder="Ask about your career plan, skills, or job search..." autocomplete="off">
+                    <button type="submit" aria-label="Send message">
+                        <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path></svg>
+                    </button>
+                </form>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
