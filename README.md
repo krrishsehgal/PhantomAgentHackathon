@@ -1,6 +1,4 @@
-LAKSHYA: 
- A I   P O W E R E D  C A R E E R   A N D
- S K I L L   D E V E L O P M E N T  AI  AGENT
+LAKSHYA: AI POWERED CAREER AND SKILL DEVELOPMENT AI AGENT
 
 FastAPI backend + simple HTML frontend that suggests career paths, next skills to learn, curated resources, and a 30/60/90-day plan based on a user's profile.
 
